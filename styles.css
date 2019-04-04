@@ -1,0 +1,115 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+.dots-wrapper {
+  position: absolute;
+  width: 100px;
+  left: 50%;
+  margin-left: -50px;
+  bottom: 20px;
+  text-align: center;
+}
+.dots-wrapper li {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border-radius: 50%;
+  margin: 0 4px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.dots-wrapper li.active, .dots-wrapper li:hover {
+  opacity: 1;
+}
+.slider {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  margin: 0 auto;
+  cursor: pointer;
+  overflow: hidden;
+}
+.slider .slider-inner {
+  position: absolute;
+}
+.slider .slider-inner:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.slider .slider-inner .slide {
+  float: left;
+  box-sizing: border-box;
+  background-size: 100% auto;
+  background-attachment: fixed;
+  background-position: center center;
+}
+.slider .slider-inner .slide.slide1 {
+  background-image: url('//blogs-images.forbes.com/rosatrieu/files/2014/08/Valencia_market_-_lemons-1940x1454.jpg');
+}
+.slider .slider-inner .slide.slide2 {
+  background-image: url('//i.huffpost.com/gen/2930708/images/o-GMO-ORANGES-facebook.jpg');
+}
+.slider .slider-inner .slide.slide3 {
+  background-image: url('//blogs.kcrw.com/goodfood/wp-content/uploads/2013/05/watermelon.jpeg');
+}
+.slider .slider-inner .slide.slide4 {
+  background-image: url('http://lghttp.32478.nexcesscdn.net/80E972/organiclifestylemagazine/wp-content/uploads/2013/09/Blueberries-.jpg');
+}
+.slider .slider-inner .slide.slide5 {
+  background-image: url('//upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Limes.jpg/1200px-Limes.jpg');
+}
+.slider .slider-inner .slide img {
+  display: block;
+  width: 100%;
+}
+.slider .slider-inner .slide span {
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  top: 12vw;
+  font-size: 10vw;
+  line-height: 100vh;
+  letter-spacing: 1vw;
+  font-family: Impact, Charcoal, sans-serif;
+  text-shadow: 5px 5px 0px #fff;
+}
+a[class|="arrow"] {
+  position: absolute;
+  display: block;
+  top: 50%;
+  margin-top: -20px;
+  width: 40px;
+  height: 40px;
+}
+.arrow-left {
+  left: 20px;
+  border-bottom: 6px solid #fff;
+  border-left: 6px solid #fff;
+  transform: rotate(45deg);
+  transition: left 0.5s;
+}
+.arrow-left:hover {
+  left: 15px;
+}
+.arrow-right {
+  right: 20px;
+  border-bottom: 6px solid #fff;
+  border-right: 6px solid #fff;
+  transform: rotate(-45deg);
+  transition: right 0.5s;
+}
+.arrow-right:hover {
+  right: 15px;
+}
